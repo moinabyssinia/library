@@ -3,13 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Your Library</title>
 </head>
 <body>
     <h1>Your Library Experience Starts Here!</h1>
-    <table id="myBooks">
+
+    <div class="book-list">
+        <table id="myBooks">
+            <th>Name of the Book</th>
+            
+        </table>
+    </div>
+
+    <div class="btn1">
+        <button>Add a Book</button>
+    </div>
+
+    <!-- insert new book form -->
+    <div class="new-book">
+        <div class="title">
+            <label for="title">
+                <input name="title" type="text" placeholder="Title">
+            </label>
+        </div>
+
+        <div class="author">
+            <label for="author">
+                <input name="author" type="text" placeholder="Author">
+            </label>
+        </div>
         
-    </table>
+        <div class="pages">
+            <label for="pages">
+                <input name="pages" type="text" placeholder="Pages">
+            </label>
+        </div>
+
+        <div class="btn2">
+            <button>Add</button>
+        </div>
+        
+    </div>
+    
+
     <script src="script.js"></script>
 </body>
 </html>

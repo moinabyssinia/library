@@ -55,8 +55,8 @@ printBooks()
 // add table border
 const element = document.getElementsByTagName('td');
 for (let item of element){
-    console.log(item);
-    item.style.border = '1px solid #999';
-    item.style.padding = '0.5rem';
-    // item.classList.toggle('tableStyle');
+    // console.log(item);
+    // item.style.border = '1px solid #999';
+    // item.style.padding = '0.5rem';
+    item.classList.toggle('tableStyle');
 }
