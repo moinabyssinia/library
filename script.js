@@ -60,3 +60,10 @@ for (let item of element){
     // item.style.padding = '0.5rem';
     item.classList.toggle('tableStyle');
 }
+
+const form = document.querySelectorAll(".new-book");
+const adder = document.querySelectorAll("button");
+adder[0].addEventListener("click", function(){
+    console.log("clicked");
+    document.body.form.classList.toggle("hide")
+})
