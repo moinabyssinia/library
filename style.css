@@ -1,5 +1,6 @@
 .tableStyle{
     border: 1px solid #999;
+    width: 350px;
     /* padding: 0.5rem; */
   }
 
@@ -7,21 +8,27 @@ th {
   text-align: left;
 }
 
-.new-book {
-  margin: 80px 0 20px 5px;
+#new-book {
+  margin: 20px 0 20px 0px;
   display: table-cell;
   align-items: center;
   border: 1px solid gray;
   padding: 10px;
+  display: none;
+  width: 332px;
 }
 
+input {
+  margin-bottom: 2px;
+  width: 90%;
+}
+
+input[type = "submit"] {
+  width: 40%;
+}
 .btn1 {
   margin: 10px 0 10px 0;
 }
 .btn2 {
   margin: 10px 0 0 0;
-}
-
-.hide {
-  display: none;
 }

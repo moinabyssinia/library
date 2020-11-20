@@ -61,9 +61,16 @@ for (let item of element){
     item.classList.toggle('tableStyle');
 }
 
-const form = document.querySelectorAll(".new-book");
+//uncollapse form
+const form = document.getElementById("new-book");
 const adder = document.querySelectorAll("button");
 adder[0].addEventListener("click", function(){
     console.log("clicked");
-    document.body.form.classList.toggle("hide")
+    form.style.display = "block";
+})
+
+//get new books from users
+submitButton = document.getElementsByClassName("btn2");
+submitButton[0].addEventListener('clicked', function(){
+    console.log("submited");
 })
