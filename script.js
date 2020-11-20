@@ -70,7 +70,9 @@ adder[0].addEventListener("click", function(){
 })
 
 //get new books from users
-submitButton = document.getElementsByClassName("btn2");
-submitButton[0].addEventListener('clicked', function(){
-    console.log("submited");
+const submitButton = document.getElementById("submit-it");
+let titleValue = 'test';
+submitButton.addEventListener('clicked', function(){
+    titleValue = document.getElementById("unique-title").value;
+    console.log(titleValue);
 })
