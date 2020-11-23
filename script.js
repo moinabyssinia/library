@@ -14,13 +14,11 @@ const addBooks = function(name, author, pages){
 }
 
 // manually add to library
-addBooks("grant", "ron chernow", 289)
-addBooks("guns, germs, and steel", "jared diamond", 332)
-addBooks("genghis khan and the making of the modern world", "jack wheatherford", 430)
-addBooks("leningrad", "anna reid", 434)
-addBooks("embers of war", "fredrik logvall", 120)
-addBooks("rites of spring", "modris eksteins", 540)
-addBooks("the history of the ancient world", "susan bauer", 652)
+addBooks("More Myself: A Journey", "Alicia Keys", 272)
+addBooks("Martin Luther King", "Godfrey Hodgson", 280)
+addBooks("Holy Bible", "God", 1147)
+addBooks("The Narrative of the Life of Frederick Douglass, an American Slave", "Frederick Douglass", 160)
+addBooks("You Have a Brain: A Teen's Guide to T.H.I.N.K. B.I.G.", "Ben Carson", 240)
 
 //function to loop through array and display
 // const printBooks = function(){
@@ -71,8 +69,7 @@ adder[0].addEventListener("click", function(){
 
 //get new books from users
 const submitButton = document.getElementById("submit-it");
-let titleValue = 'test';
-submitButton.addEventListener('clicked', function(){
-    titleValue = document.getElementById("unique-title").value;
-    console.log(titleValue);
+submitButton.addEventListener('click', function(){
+    const authorField = document.getElementById("authorField").value;
+    console.log(authorField);
 })

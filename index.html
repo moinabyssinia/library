@@ -20,8 +20,11 @@
         <button>Add a Book</button>
     </div>
 
-    <!-- insert new book form -->
-    <form method="GET" id ="new-book">
+    <!-- insert new book form 
+    Action: location that the information from the form 
+    is being sent to - a URL of some kind
+    -->
+    <form id ="new-book">
         <div class="title">
             <label for="title">
                 <input name="title" type="text" placeholder="Title" id = "unique-title">
@@ -30,7 +33,7 @@
 
         <div class="author">
             <label for="author">
-                <input name="author" type="text" placeholder="Author">
+                <input name="author" type="text" placeholder="Author" id="authorField">
             </label>
         </div>
         
@@ -40,8 +43,12 @@
             </label>
         </div>
 
+        <!-- based on https://stackoverflow.com/questions/17433557/how-to-save-user-input-into-a-variable-in-html-and-js
+        
+        use type = "button" unless you want the form to interact with server
+        -->
         <div class="btn2">
-            <input type="submit" name="Submit" value = "Submit" id = "submit-it">
+            <input type="button" name="Submit" value = "Submit" id = "submit-it">
         </div>
         
     </form>
