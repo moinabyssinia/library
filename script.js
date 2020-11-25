@@ -14,11 +14,11 @@ const addBooks = function(name, author, pages){
 }
 
 // manually add to library
-addBooks("More Myself: A Journey", "Alicia Keys", 272)
-addBooks("Martin Luther King", "Godfrey Hodgson", 280)
-addBooks("Holy Bible", "God", 1147)
-addBooks("The Narrative of the Life of Frederick Douglass, an American Slave", "Frederick Douglass", 160)
-addBooks("You Have a Brain: A Teen's Guide to T.H.I.N.K. B.I.G.", "Ben Carson", 240)
+// addBooks("More Myself: A Journey", "Alicia Keys", 272)
+// addBooks("Martin Luther King", "Godfrey Hodgson", 280)
+// addBooks("Holy Bible", "God", 1147)
+// addBooks("The Narrative of the Life of Frederick Douglass, an American Slave", "Frederick Douglass", 160)
+// addBooks("You Have a Brain: A Teen's Guide to T.H.I.N.K. B.I.G.", "Ben Carson", 240)
 
 //function to loop through array and display
 // const printBooks = function(){
@@ -51,13 +51,17 @@ const printBooks = function(){
 printBooks();
 
 // add table border
-const element = document.getElementsByTagName('td');
-for (let item of element){
-    // console.log(item);
-    // item.style.border = '1px solid #999';
-    // item.style.padding = '0.5rem';
-    item.classList.toggle('tableStyle');
+const styleTable = function(){
+    const element = document.getElementsByTagName('td');
+    for (let item of element){
+        // console.log(item);
+        // item.style.border = '1px solid #999';
+        // item.style.padding = '0.5rem';
+        item.classList.toggle('tableStyle');
+    }
 }
+
+styleTable();
 
 //uncollapse form
 const form = document.getElementById("new-book");
@@ -76,8 +80,14 @@ submitButton.addEventListener('click', function(){
     //push new data to array
     addBooks(titleField, authorField, pagesField);
     //delete existing DOM 
-    const dom = document.getElementsByTagName("tbody");
-    dom[0].remove();
+    if (myLibrary.length > 1){
+        const dom = document.getElementsByTagName("td");
+        for(let ii = 0; ii <= dom.length; ii++){
+            dom[ii].remove();
+        }
+    }
     //print table after pushing new data
     printBooks();
+    //add table style
+    styleTable();
 })
