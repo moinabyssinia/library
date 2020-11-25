@@ -48,7 +48,7 @@ const printBooks = function(){
     })
 }
 
-printBooks()
+printBooks();
 
 // add table border
 const element = document.getElementsByTagName('td');
@@ -70,6 +70,14 @@ adder[0].addEventListener("click", function(){
 //get new books from users
 const submitButton = document.getElementById("submit-it");
 submitButton.addEventListener('click', function(){
+    const titleField = document.getElementById("unique-title").value;
     const authorField = document.getElementById("authorField").value;
-    console.log(authorField);
+    const pagesField = document.getElementById("num-pages").value;
+    //push new data to array
+    addBooks(titleField, authorField, pagesField);
+    //delete existing DOM 
+    const dom = document.getElementsByTagName("tbody");
+    dom[0].remove();
+    //print table after pushing new data
+    printBooks();
 })

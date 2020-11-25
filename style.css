@@ -23,7 +23,7 @@ input {
   width: 90%;
 }
 
-input[type = "submit"] {
+input[type = "button"] {
   width: 40%;
 }
 .btn1 {
@@ -31,4 +31,10 @@ input[type = "submit"] {
 }
 .btn2 {
   margin: 10px 0 0 0;
+}
+.check-box{
+  display: flex;
+}
+input[type = "checkbox"] {
+  width: 40px;
 }

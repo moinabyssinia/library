@@ -17,7 +17,7 @@
     </div>
 
     <div class="btn1">
-        <button>Add a Book</button>
+        <button>New Book</button>
     </div>
 
     <!-- insert new book form 
@@ -39,8 +39,13 @@
         
         <div class="pages">
             <label for="pages">
-                <input name="pages" type="text" placeholder="Pages">
+                <input name="pages" type="text" placeholder="Pages" id="num-pages">
             </label>
+        </div>
+
+        <div class="check-box">
+            <label for="isRead">Read</label>
+            <input type="checkbox" name="isRead">
         </div>
 
         <!-- based on https://stackoverflow.com/questions/17433557/how-to-save-user-input-into-a-variable-in-html-and-js
@@ -50,7 +55,6 @@
         <div class="btn2">
             <input type="button" name="Submit" value = "Submit" id = "submit-it">
         </div>
-        
     </form>
     
 
