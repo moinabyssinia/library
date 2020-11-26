@@ -39,7 +39,7 @@ const printBooks = function(){
         // get a reference to the table
         let tableRef = document.getElementById("myBooks");
         // insert row at the end of the table
-        let newRow = tableRef.insertRow(-1);
+        let newRow = tableRef.insertRow(0);
         // insert a cell in the row at index 0
         let newCell = newRow.insertCell(0);
         // append a text node to the cell
@@ -82,10 +82,13 @@ submitButton.addEventListener('click', function(){
     //delete existing DOM 
     if (myLibrary.length > 1){
         const dom = document.getElementsByTagName("td");
-        for(let ii = 0; ii <= dom.length; ii++){
+        for(let ii = dom.length-1; ii >= 0; ii--){
             dom[ii].remove();
         }
+        //check dom array
+        console.log(dom)
     }
+
     //print table after pushing new data
     printBooks();
     //add table style
